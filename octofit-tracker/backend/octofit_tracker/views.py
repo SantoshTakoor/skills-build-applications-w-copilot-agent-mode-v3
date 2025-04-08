@@ -25,10 +25,11 @@ class WorkoutListCreateView(generics.ListCreateAPIView):
     serializer_class = WorkoutSerializer
 
 def api_root(request):
+    codespace_url = "https://[SantoshTakoor/skills-build-applications-w-copilot-agent-mode-v3#1]-8000.app.github.dev"
     return Response({
-        'users': '/api/users/',
-        'teams': '/api/teams/',
-        'activity': '/api/activity/',
-        'leaderboard': '/api/leaderboard/',
-        'workouts': '/api/workouts/',
+        'users': f'{codespace_url}/api/users/',
+        'teams': f'{codespace_url}/api/teams/',
+        'activity': f'{codespace_url}/api/activity/',
+        'leaderboard': f'{codespace_url}/api/leaderboard/',
+        'workouts': f'{codespace_url}/api/workouts/',
     })
